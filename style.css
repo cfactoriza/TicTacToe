@@ -4,6 +4,8 @@ body {
     background-attachment: fixed;
     background-position: 100%;
     background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 header{
     padding-top: none;
@@ -19,18 +21,23 @@ h1{
     font-size: 35px;
     padding-bottom: 10px;
 }
+section.GridSection{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
 .grid-container{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    grid-template-columns: 250px 250px 250px;
-    padding-bottom: 10px;
-    clear: both;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
 }
 .grid-item {
     border: 5px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
-    font-size: 30px;
+    width: 75px;
+    height: 75px;
     text-align: center;
 }
 .NameSection{
@@ -45,7 +52,7 @@ h1{
     text-align: center;
 }
 .Name2{
-    color: rebeccapurple;
+    color: plum;
     display: flex;
     flex-direction: column;
     font-size: 25px;
@@ -73,7 +80,7 @@ button.reset-button{
     color: white;
     cursor: pointer;
     display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: Arial,sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
@@ -84,47 +91,4 @@ button.reset-button{
     text-decoration: none;
     touch-action: manipulation;
     width: 100%;
-    will-change: transform;
-}
-/* CSS */
-.button-27 {
-  appearance: none;
-  background-color: #000000;
-  border: 2px solid #1A1A1A;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0;
-  min-height: 60px;
-  min-width: 0;
-  outline: none;
-  padding: 16px 24px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 100%;
-  will-change: transform;
-}
-
-.button-27:disabled {
-  pointer-events: none;
-}
-
-.button-27:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
-}
-
-.button-27:active {
-  box-shadow: none;
-  transform: translateY(0);
 }
