@@ -9,8 +9,20 @@ I need to program a "smart" AI (functions)
 
 Input names and display them (even computers)
 
-
 */
+const Player1 = "Terran"
+const Player2 = "Zerg"
+const WinCon = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+]
+
 /*
 let initialState;
 const = gameState() {
@@ -40,39 +52,7 @@ gameArea.addEventListener('click', function(clickEvent) {
 })*/ ;
 
 
-function getRow(board, Row){
-  return board[Row];
-}
-console.log("This returns a row")
-console.log(getRow(board, 2));
 
-function getCol(board, Col){
-  let NewCol = [];
-  for (let i = 0; i < board.length; i++){
-    NewCol.push(board[i][Col]);
-  }
-return NewCol
-}
-console.log("This returns a column")
-console.log(getCol(board, 2))
-
-/*function getDiagonal(board, diag){
-  let ylength = board.length;
-  let xlength = board[0].length;
-  let maxlength = Math.max(xlength, ylength);
-  for (let k = 0; k <= 2 *(maxlength - 1); k++){
-    diag = [];
-    for (let y = ylength - 1; y >= 0; --y){
-      let x = k - y;
-      if (x >= 0 && x < xlength) {
-        diag.push(board[y][x]);
-      } 
-    }
-    }
-    return diag;
-  }
-console.log("This should return a diagonal")
-console.log(getDiagonal(board))*/
 
  const winningPattern = [
      [0,1,2],
