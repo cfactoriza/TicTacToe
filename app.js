@@ -11,40 +11,85 @@ Input names and display them (even computers)
 
 
 */
+/*
+let initialState;
+const = gameState() {
+  players: ["x","o"],
+  board: [
+    [null, null, null],
+    [null, null, null],
+    [null, null, null]
+  ],
+  currentPlayer: "x",
+};*/
 
 
-function TicTacToe(){
-    let g1, g2, g3, g4, g5, g6, g7, g8, g9;
-    g1 = Document.getElementsByClassName("grid-item");
-    g2 = Document.getElementsByClassName("grid-item");
-    g3 = Document.getElementsByClassName("grid-item");
-    g4 = Document.getElementsByClassName("grid-item");
-    g5 = Document.getElementsByClassName("grid-item");
-    g6 = Document.getElementsByClassName("grid-item");
-    g7 = Document.getElementsByClassName("grid-item");
-    g8 = Document.getElementsByClassName("grid-item");
-    g9 = Document.getElementsByClassName("grid-item");
-}
+let board = [
+            [1, 2, 3], 
+            [4, 5, 6],
+            [7, 8, 9]
+          ];
 
-const gameArea = document.getElementById("grid-container");
+/*
+const gameArea = Document.getElementById("grid-container");
 gameArea.addEventListener('click', function(clickEvent) {
-
-    /*console.log("Hello")*/
+    console.log("Hello")
   if (clickEvent.target.matches('.grid-item')) {
     console.log("hello")
-    clickEvent.target.
   }
-});
+})*/ ;
 
 
-
-
-
-
-
-function Victory(TicTacToe){
-    for (let i = 0; i < 3; i++){
-
-    }
+function getRow(board, Row){
+  return board[Row];
 }
+console.log("This returns a row")
+console.log(getRow(board, 2));
 
+function getCol(board, Col){
+  let NewCol = [];
+  for (let i = 0; i < board.length; i++){
+    NewCol.push(board[i][Col]);
+  }
+return NewCol
+}
+console.log("This returns a column")
+console.log(getCol(board, 2))
+
+/*function getDiagonal(board, diag){
+  let ylength = board.length;
+  let xlength = board[0].length;
+  let maxlength = Math.max(xlength, ylength);
+  for (let k = 0; k <= 2 *(maxlength - 1); k++){
+    diag = [];
+    for (let y = ylength - 1; y >= 0; --y){
+      let x = k - y;
+      if (x >= 0 && x < xlength) {
+        diag.push(board[y][x]);
+      } 
+    }
+    }
+    return diag;
+  }
+console.log("This should return a diagonal")
+console.log(getDiagonal(board))*/
+
+ const winningPattern = [
+     [0,1,2],
+     [3,4,5],
+     [6,7,8],
+     [0,3,6],
+     [1,4,7],
+     [2,5,8],
+     [2,4,6],
+     [0,4,8]
+ ];
+
+
+let buttonReset = Document.getElementsByClassName("reset-button");
+buttonReset.addEventListener('click', function(clickEvent)){
+  if (clickEvent.target.matches("reset-button")){
+    initialState
+  }
+
+}
