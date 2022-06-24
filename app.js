@@ -1,15 +1,4 @@
-/* 
-I need a Tic-Tac-Toe win validator function (win/draw/loss scenarios)
-
-I need to set-up a DOM on clicking on grids to play Xs and Os. Function?
-
-I need a reset function
-
-I need to program a "smart" AI (functions)
-
-Input names and display them (even computers)
-
-*/
+//HTML Elements and Const Declarations//
 const Player1 = "Terran"
 const Player2 = "Zerg"
 const WinCon = [
@@ -22,34 +11,33 @@ const WinCon = [
   [0, 4, 8],
   [2, 4, 6]
 ]
-
-/*
-let initialState;
-const = gameState() {
-  players: ["x","o"],
-  board: [
-    [null, null, null],
-    [null, null, null],
-    [null, null, null]
-  ],
-  currentPlayer: "x",
-};*/
+// const gameArea = Document.getElementById('grid-container')
+// const gridElements = Document.querySelectorAll('.grid-item')
+// const ResetButton = Document.getElementsByClassName('reset-button')
+// const Player1logo = Document.querySelector('[TerranLogo]')
+// const Player2logo = Document.querySelector('[ZergLogo]')
 
 
-let board = [
-            [1, 2, 3], 
-            [4, 5, 6],
-            [7, 8, 9]
-          ];
 
-/*
+//Game Elements and Functions//
+
+let CurrentPlayer = Player1
+
+function SwapPlayer(){
+  if (CurrentPlayer = Player1){
+    CurrentPlayer = Player2
+  } else {
+    CurrentPlayer = Player1
+  }
+  return CurrentPlayer
+}
 const gameArea = Document.getElementById("grid-container");
 gameArea.addEventListener('click', function(clickEvent) {
     console.log("Hello")
   if (clickEvent.target.matches('.grid-item')) {
     console.log("hello")
   }
-})*/ ;
+});
 
 
 
@@ -67,7 +55,7 @@ gameArea.addEventListener('click', function(clickEvent) {
 
 
 let buttonReset = Document.getElementsByClassName("reset-button");
-buttonReset.addEventListener('click', function(clickEvent)){
+buttonReset.addEventListener('click', (clickEvent));{
   if (clickEvent.target.matches("reset-button")){
     initialState
   }
