@@ -39,6 +39,9 @@ section.GridSection{
     grid-template-columns: repeat(3, 1fr);
 }
 .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 5px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     width: 75px;
@@ -97,9 +100,15 @@ button.reset-button{
     touch-action: manipulation;
     width: 100%;
 }
-.x::before{
+.X::before{
+    text-align: center;
+    content: "X";
+    color: aquamarine;
     font-size: 100px;
 }
-.o::before{
+.O::before{
+    text-align: center;
+    content: "O";
+    color: plum;
     font-size: 100px;
 }
