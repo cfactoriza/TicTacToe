@@ -44,6 +44,18 @@ function SwapPlayer(){
   return CurrentPlayer
 }
 
+
+
+let g1 = document.getElementById("grid-1")
+let g2 = document.getElementById("grid-2")
+let g3 = document.getElementById("grid-3")
+let g4 = document.getElementById("grid-4")
+let g5 = document.getElementById("grid-5")
+let g6 = document.getElementById("grid-6")
+let g7 = document.getElementById("grid-7")
+let g8 = document.getElementById("grid-8")
+let g9 = document.getElementById("grid-9")
+
 const gameArea = document.getElementById("grid-container");
 gameArea.addEventListener('click', function(clickEvent) {
   if (clickEvent.target.matches('.grid-item')) {
