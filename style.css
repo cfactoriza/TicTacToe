@@ -13,6 +13,10 @@ header{
     text-align: center;
     background-color:( black);
 }
+.TurnStatus{
+    font-size: 50px;
+    color: green;
+}
 h1{
     height: auto;
     width: 100%;
@@ -28,7 +32,8 @@ section.GridSection{
 }
 #grid-container{
     display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: (3);
+    grid-template-rows: (3);
     display: grid;
     gap: 1px;
     grid-template-columns: repeat(3, 1fr);
@@ -91,4 +96,10 @@ button.reset-button{
     text-decoration: none;
     touch-action: manipulation;
     width: 100%;
+}
+.x::before{
+    font-size: 100px;
+}
+.o::before{
+    font-size: 100px;
 }
