@@ -13,9 +13,17 @@ header{
     text-align: center;
     background-color:( black);
 }
-.TurnStatus{
+.turnstatus{
+    background-color: #8ec3eb;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: black 5px solid;
     font-size: 50px;
-    color: green;
+    color: black;
 }
 h1{
     height: auto;
@@ -32,11 +40,10 @@ section.GridSection{
 }
 #grid-container{
     display: flex;
-    grid-template-columns: (3);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: (3);
     display: grid;
     gap: 1px;
-    grid-template-columns: repeat(3, 1fr);
 }
 .grid-item {
     display: flex;
@@ -50,6 +57,8 @@ section.GridSection{
 }
 .NameSection{
     display: flex;
+    align-items: center;
+    justify-content: center;
     justify-content: space-evenly;
 }
 .Name1{
@@ -101,13 +110,11 @@ button.reset-button{
     width: 100%;
 }
 .X::before{
-    text-align: center;
     content: "X";
     color: aquamarine;
     font-size: 100px;
 }
 .O::before{
-    text-align: center;
     content: "O";
     color: plum;
     font-size: 100px;
