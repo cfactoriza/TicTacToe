@@ -4,17 +4,45 @@ const Player2 = "Zerg";
 const gridCells = document.querySelectorAll(".grid-item");
 const turnStatus = document.querySelector(".turnstatus");
 
-const player1Name = document.querySelector(".Name1");
-const player2Name = document.querySelector(".Name2");
+const player1Nameplate = document.querySelector(".Name1");
+const player2Nameplate = document.querySelector(".Name2");
+let player1Name;
+let player2Name;
 
-player1Name.addEventListener("keypress", (event) =>{
-  if (event.key === "Enter" && player1Name.value.length > 0){
-    player1Name = 
+player1Nameplate.addEventListener("input", (event) =>{
+  if (event.key === "Enter" && player1Nameplate.value.length > 0){
+    player1Name = player1Nameplate.value
   }
-  
+  return player1Name;
+}); 
 
 
-} 
+player2Nameplate.addEventListener("input", (event) =>{
+  if (event.key === "Enter" && player2Nameplate.value.length > 0){
+    player1Name = player2Nameplate.value
+  }
+  return player1Name;
+}); 
+
+// let pvp = true;
+// let pve = false;
+
+// function gameType(){
+// if(player1Nameplate.value != "" && player2Nameplate.value === ""){
+//   pve = true
+//   console.log(pve)
+// } 
+// if (pve = true){
+//   pvp = false
+//   console.log()
+// }
+// return pve; 
+// }
+
+
+// console.log(pve)
+// console.log(pvp)
+
 
 
 
@@ -115,6 +143,8 @@ for (const gridCell of gridCells) {
 
 const resetButton = document.querySelector(".reset-button");
 const resetFunctionClick = () => {
+  player1Nameplate.value = ""
+  player2Nameplate.value = ""
   winner = null;
   turnStatus.innerHTML = "X is next";
   for (const gridCell of gridCells) {
