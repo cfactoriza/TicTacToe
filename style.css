@@ -38,6 +38,8 @@ header{
     align-items: center;
 }
 .turnstatus{
+    clear: both;
+    display: flex;
     background-color: #8ec3eb;
     height: 100px;
     width: 200px;
@@ -85,14 +87,16 @@ section.GridSection{
     justify-content: center;
     justify-content: space-evenly;
 }
-.Name1{
+#Name1{
+    background-color: black;
     color: aquamarine;
     display: flex;
     flex-direction: column;
     font-size: 25px;
     text-align: center;
 }
-.Name2{
+#Name2{
+    background-color: black;
     color: plum;
     display: flex;
     flex-direction: column;
