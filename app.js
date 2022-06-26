@@ -3,7 +3,7 @@ const Player1 = "Terran"
 const Player2 = "Zerg"
 
 const gridCells = document.querySelectorAll('.grid-item')
-const resetButton = document.getElementById('reset-button')
+const resetButton = document.querySelector('.reset-button')
 // const Player1logo = document.querySelector('[TerranLogo]')
 // const Player2logo = document.querySelector('[ZergLogo]')
 
@@ -72,6 +72,9 @@ const gameState = () => {
     winner = g7;
     turnStatus.innerHTML =`${winner} is the winner!`
     console.log(winner);
+  } else if (g1 && g2 && g3 && g4 && g5 && g6 && g7 && g8 && g9){
+    turnStatus.innerHTML = "This is a draw!"
+    winner = "none"
   }
   }
 
@@ -93,24 +96,24 @@ function swapPlayer(){
 
 //Game Elements and Functions//
 
-// const resetFunction = (e) => {
-//   console.log(e);
-// }
 
 // This function/event listener adds Xs and Os(target class list event), checks if X or Os are already in the list(prevents swapping of X or Os), swaps Player turn(swapPlayer), and checks win conditions (with gameState)
 
 const gridCellClick = (e) => {
   const gridNum = e.target.classList[1];
+  if (winner === null){
   if (e.target.classList[2] === "X" || e.target.classList[2] === "O"){
+    turnStatus.innerHTML = "You must construct additional pylons!"
     return;
   }
-  if (winner === null){
   if (currentPlayer === Player1){
     e.target.classList.add("X");
+    turnStatus.innerHTML = "O is next"
     swapPlayer();
     gameState();
   } else {
     e.target.classList.add("O");
+    turnStatus.innerHTML = "X is next"
     swapPlayer();
     gameState();
   }
@@ -121,27 +124,6 @@ for (const gridCell of gridCells){
 }
 
 
-// const gameArea = document.getElementById("grid-container");
-// gameArea.addEventListener('click', function(clickEvent) {
-//   if (clickEvent.target.matches('.grid-item')) {
-//     switch(currentPlayer){
-//        case Player1:
-//         e .target.
-//         console.log ("x")
-//         break;
-//       case Player2:
-
-//         console.log("y") 
-//         break;
-//     }
-//     SwapPlayer()
-//   }
-// });
-
-// // let buttonReset = document.getElementsByClassName("reset-button");
-// // buttonReset.addEventListener('click', (clickEvent));{
-// //   if (clickEvent.target.matches("reset-button")){
-    
-// //   }
-
-// // }
+const resetFunction = (e) => {
+  console.log(e);
+}
